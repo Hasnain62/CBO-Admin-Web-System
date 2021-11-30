@@ -1,0 +1,54 @@
+Mohammad Hasnain Mirza 
+11265943
+mhm175
+
+About the CBO 
+
+The web system is developed for a CBO which keen to help the physically disabled.
+
+3 -tier - Application
+
+Server - Node JS
+Database - MySql
+client end - HTML CSS
+
+Special dependencies ;
+
+  - express-session has been used for Authentication sessios
+
+Architecture -
+
+
+ - Staring from server running on port 8000 , has routes to and from the html front end pages 
+ - The html pages use javascript to send fetch ajax requests .
+ 
+ Authentication-
+  
+  - express session keeps a session for a user untill the user logs out. 
+  - All the pages have have redirected in case of illegal access
+  - 
+
+
+ Design -
+  
+  - The web system is initilized by the Administrator who is the Mager of this branch of the CBO.
+  - The Administrator then has access over the database of the staff as well as of the people who are helped.
+  - Staff on the other hand can only access the clients(ones who are helped).
+  
+  - For the admin, there is a separate page to view Staff member and access multiple functionalites like Registering
+    a new staff , with the necessary credentials as well as deleting the staff among other features.
+  
+  - An about page to showcase some 
+
+
+- bcrypt for encryption 
+
+
+Testing -
+
+  - When tried to open with an incorrect login credentials it redirects back to login.
+  - wrong inputs and error handling has been taken care of at almost every input.
+  
+
+Admin - has102@gmail.com
+Password - secret

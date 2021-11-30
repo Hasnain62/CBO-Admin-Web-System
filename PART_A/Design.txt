@@ -1,0 +1,34 @@
+Mental Health Foundation - Saskatoon 
+
+  Admin Privelages:
+
+	Add a staff member  (  )
+	 - credentials (key)
+	 - 
+	 
+	Delete a staff member ()
+	 - key
+
+	Add a Client 
+	- credentials (key) with a time stamp 
+	- report
+	
+	update customer report 
+	- key (UPDATE report call in server to get from database SQL)
+	
+	Replace the client report-
+	 - UPDATE clients SET Report ="Chan se jo tute koi sapna" where Name="Hasan Ali";
+    
+	TO DO: 
+	
+	ADD a report to a client;
+	Update customers;
+	
+
+	delete 
+	- key (Like Update )
+	
+	people helped in per month.
+		// get the table
+
+Limitation : Express session needs to be installed in the node conatainer manually and dockerfile doesn't run that

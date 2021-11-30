@@ -1,0 +1,13 @@
+The new technology used is React
+
+Reason for choosing React
+
+In part A , I used node/express to send html files to the client and load them
+As html files are static resources , I had to write a lot of javascript code to send requests to server and then
+based on the data returned from the server , javascript created dynamic elements on the html page and for each
+dynamic element I had to use a unique id which was becoming very cumbersome
+Also , there was a lot of copy pasting code and I could not really generalise common elements which are there in every page
+like navbar. and also changing  href for an anchor tag in the navbar meant going to every single html file and editing it's
+code
+
+React removed this problem by allowing to use resuable react components

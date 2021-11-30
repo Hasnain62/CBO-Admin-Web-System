@@ -1,0 +1,34 @@
+MySql
+Node JS
+React JS
+
+New Technology - React JS 
+
+The new technology introduced in this part is React JS , ALthough it is for the same CBO.
+
+Features - 
+
+ Registering  patients - 
+ Registering staff -
+
+Architecture -
+
+  - Has a secure login authentication as only staff and 
+  - it runs on a seperate port and sends api requests to the server by using the server's url
+  - react-axios is used instead of fetch to make ajax requests to the server
+  - 
+
+Testing - 
+ 
+ - Login verifications has been tested.
+ - It pops up alert messages when given wrong login credentials.
+
+Differences between Part A and Part B -
+
+ -Part A does not have a seperate frontend port whereas in Part D , React uses it's own seperate port to run the frontend
+
+ - React handles the routes on its own just requires the backend to fetch data to and from.
+   Whereas in Part A all the routes were in the serevr itself.
+
+
+ 

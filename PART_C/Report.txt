@@ -1,0 +1,18 @@
+ReactJS is a frontend library . Here are it's key concepts
+
+    -React uses JSX (Javascript syntax extension) to create html elements .JSX's syntax is similar to HTML
+
+    - React allows us to contain functional or class components which have their own state values and
+      a set of JSX and functions which allows us to reuse the components in different pages and still mantain the structure
+
+    - We can pass data to a react component and then access data from the component's props object
+
+    - React Components also have state values which is used to store data for the current state of the object . Whenever
+    a particular state value changes , the elements rendered using that state value are rerendered according to the new
+    state value.
+
+    - React uses it's own Virtual DOM tree which listens to the changes in state and update the original DOM only where
+    the state change has occured rather than rendering the whole Document Tree again. This allows fast rendering of the
+    data compared to using only javascript
+
+    -

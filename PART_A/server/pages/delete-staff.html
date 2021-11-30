@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+}
+</style>
+
+<div style ="margin-left:20px">
+    <h1>Delete a staff</h1> <br>
+    <h2 style="background-size: contain; font-size: larger;"> Reason for Expulsion </h2>
+
+    <form method ='post' action ='/delete-staff'>
+        <input type ='name' name = 'name' placeholder="Name" required /><br>
+        <input type="checkbox" id="Behaviour" name="Behaviour" value="Incompetent Behaviour">
+        <label for="Behaviour">Incompetent Behaviour</label><br> 
+
+        <input type="checkbox" id="Resign" name="Resign" value="Voluntary Resignation ">
+        <label for="Resign">  Voluntary Resignation </label><br>
+
+        <input type="checkbox" id="Complaints" name="Complaints" value="Complaints">
+        <label for="Behaviour">Several Complaints</label><br>
+
+        <input type="checkbox" id="Conflict" name="Conflict" value="Conflict">
+        <label for="Behaviour"> Transfer to a different city </label><br>
+
+        <input type="checkbox" id="Other" name="Other" value="Other">
+        <label for="Behaviour">Other</label><br>
+      
+        <input type = 'submit' />
+        
+
+
+    </form>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background-color: burlywood;
+
+}
+</style>
+
+<h1> Staff Members </h1>
+
+<body>
+    <script type = "text/javascript">
+      
+      var http = new XMLHttpRequest();
+      var url = '/get-staff1';
+     // var params = 'Clientname=' + document.getElementById("Clientname").value + "&Clientage=" + document.getElementById("Clientage").value+ "&Report="+document.getElementById("Report").value+"&RetClientname="+document.getElementById("RetClientname").value
+
+      
+      http.open('post', url, true);
+   
+      http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+   
+      http.onreadystatechange = function() 
+      {     
+        if(http.readyState == 4 && http.status == 200) 
+          { 
+             console.log(http.responseText) 
+            let lines=JSON.parse(http.responseText)
+            
+            let paragraph=document.getElementById("para")
+            const names = lines.map(function (user) {
+                     return "ID : "+ user.id+ " ------ " +" Name : "+ user.name + " ------ " +" Email : " + user.email ;
+                });
+             names.forEach(line=>{
+                
+                console.log(line)
+              // for (var key in line){
+                 let pTag=document.createElement("p")
+                 pTag.innerHTML= line
+                 paragraph.appendChild(pTag)
+                 //  }
+              })
+        }
+      }
+      http.send()
+
+      </script>
+<p style = "margin-left: 700px">
+    <a href = "/register-staff.html"><button> Register a Staff Member</button> </a> <br> <br>
+    <a href = "/delete-staff.html"><button> Remove a Staff Member</button> </a> <br> <br>
+</p> 
+    <div class ="para" id ="para" name ="para" >
+        
+    </div><br><br>
+
+    <a href = "/posting.html"><button>Back to Home</button></a>
+
+    
+
+
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background-color: burlywood;
+
+}
+</style>
+
+<h1>Login</h1> <br>
+<script type = "text/javascript">
+      
+  var http = new XMLHttpRequest();
+  var url = '/get-staff1';
+ // var params = 'Clientname=' + document.getElementById("Clientname").value + "&Clientage=" + document.getElementById("Clientage").value+ "&Report="+document.getElementById("Report").value+"&RetClientname="+document.getElementById("RetClientname").value
+
+  
+  http.open('post', url, true);
+
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  http.onreadystatechange = function() 
+  {     
+    if(http.readyState == 4 && http.status == 200) 
+      { 
+         console.log(http.responseText) 
+        let lines=JSON.parse(http.responseText)
+        
+        let paragraph=document.getElementById("para")
+        const names = lines.map(function (user) {
+                 return "ID : "+ user.id+ " ------ " +" Name : "+ user.name + " ------ " +" Email : " + user.email ;
+            });
+         names.forEach(line=>{
+            
+            console.log(line)
+          // for (var key in line){
+             let pTag=document.createElement("p")
+             pTag.innerHTML= line
+             paragraph.appendChild(pTag)
+             //  }
+          })
+    }
+  }
+  http.send()
+
+  </script>
+
+
+<form method ='post' action ='/login'>
+    <input type ='email' name = 'email' placeholder="Email" require />
+    <input type ='password' name = 'password' placeholder ='Password' require />
+    <input type = 'submit' />
+</form>

@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  server:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    depends_on:
+      - mysql
+    container_name: node2
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./server:/app/src"
+    command: "npx nodemon src/server.js"
+
+  mysql:
+    image: mysql:5.7.31
+    container_name: db1
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
